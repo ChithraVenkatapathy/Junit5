@@ -1,4 +1,4 @@
-package org.udemy;
+package org.udemy.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.udemy.src.FirstJunit;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -105,7 +106,7 @@ class FirstJunitTest {
     }
 
     @Test
-    @DisplayName("second Number should be not zero ")
+    //@DisplayName("second Number should be not zero ")
     @Order(8)
     void bShouldNotBeZero(){
         int a=4,b=5;
@@ -152,7 +153,7 @@ class FirstJunitTest {
                 assertThrows(ArithmeticException.class,()->firstJunit.divid(0,5)));
     }
 
-    @ParameterizedTest()
+    @ParameterizedTest(name = "number1 {0} and number2 {1}")
     @CsvFileSource(resources = "/record.csv",numLinesToSkip = 1)
     void addfromcsv(int x,int y){
         Assertions.assertEquals(x+y,firstJunit.add(x,y));
@@ -192,8 +193,7 @@ class FirstJunitTest {
 
     @Test
     @DisplayName("Assert List Iteratable")
-    void git status
-    listIterable(){
+    void gitstatuslistIterable(){
         List<Integer> lter=new ArrayList<>(List.of(1,3,6,2,4));
         Assertions.assertIterableEquals(List.of(3,9,18,6,12),firstJunit.listIterate(lter));
     }

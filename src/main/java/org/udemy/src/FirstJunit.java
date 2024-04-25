@@ -1,4 +1,4 @@
-package org.udemy;
+package org.udemy.src;
 
 import java.util.Arrays;
 import java.util.List;
