@@ -18,4 +18,8 @@ public class ExceriseDetails {
 
     }
 
+    public static void writingMethodForAssertDoesNotThrown(){
+        System.out.println("printing");
+    }
+
 }

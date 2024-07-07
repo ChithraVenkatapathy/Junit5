@@ -28,7 +28,7 @@ public class FirstJunit {
     }
 
     public int generateRandomNumber (int limit) throws InterruptedException{
-        Thread.sleep(500);
+        Thread.sleep(5000);
         return new Random().nextInt(limit);
     }
 

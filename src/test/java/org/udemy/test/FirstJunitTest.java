@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.udemy.src.ExceriseDetails;
 import org.udemy.src.FirstJunit;
 
 import java.time.Duration;
@@ -171,7 +172,7 @@ class FirstJunitTest {
         Assertions.assertAll(()->Assertions.assertTrue(firstJunit.evenOrOdd(4)));
 //        Assertions.assertAll(()->Assertions.assertFalse(firstJunit.evenOrOdd(8)));
     }
-    @RepeatedTest(10)
+    @RepeatedTest(5)
     @DisplayName("generating random number")
     void generatingRandomNumber() throws InterruptedException {
         int limit=10;
